@@ -14,9 +14,9 @@ def reformat_languages(languages)
   languages.each do |style, languages|
     languages.each do |language, type|
       hash[language]=type
-      puts language 
+      # puts language 
       for i in 0..style_hash[language].size-1
-        hash[language][:style] ||<< style_hash[language][i]
+        hash[language][:style] ||== << style_hash[language][i]
       end
     end
   end
