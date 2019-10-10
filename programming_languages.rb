@@ -14,10 +14,10 @@ def reformat_languages(languages)
   languages.each do |style, languages|
     languages.each do |language, type|
       hash[language]=type
-      # puts language 
-      for i in 0..style_hash[language].size-1
-        hash[language][:style] ||== << style_hash[language][i]
-      end
+      
+      # for i in 0..style_hash[language].size-1
+        hash[language][:style] ||=  style_hash[language]
+      # end
     end
   end
   hash
